@@ -1,17 +1,31 @@
 # Phi Finance Agent
 
-This project runs AI agents for financial data and web search using Groq + Phidata + FastAPI.
+This project is a financial AI agent playground built on the Phi platform, leveraging the Groq large language model (LLM) for natural language queries.
 
-## Setup
+## Features
 
-1. Clone the repo  
-2. Copy `.env.example` to `.env` and add your PHI_API_KEY  
-3. Run `pip install -r requirements.txt`  
-4. Run `python playground.py` locally
+- **Stock Price Retrieval:** Get real-time stock prices for companies.
+- **Analyst Recommendations:** Summarize the latest analyst ratings and opinions.
+- **Company News:** Fetch recent news articles related to companies.
+- **Web Search Agent:** Search the web for additional information with source attribution.
+- **Interactive Playground:** Provides an interface to interact with multiple AI agents simultaneously.
 
-## Deployment
+## Technologies Used
 
-Configured for Render.com with `render.yaml`.
+- [Phi AI platform](https://phidata.app)
+- Groq LLM (`llama3-70b-8192` model)
+- YFinance for financial data
+- DuckDuckGo API for web searches
+- FastAPI and Uvicorn for serving the playground app
 
-Set your PHI_API_KEY in the Render Dashboard environment variables.
+## File Structure
 
+- `financial_agent.py`: Defines the financial AI agent with relevant tools.
+- `playground.py`: Combines agents and serves the interactive playground.
+- `.env`: Environment variables including API keys.
+- `requirements.txt`: Python dependencies for the project.
+- `render.yaml`: Configuration file for deploying on Render.com
+
+---
+
+Created to demonstrate integration of LLMs with financial and web data APIs, designed for deployment as a web service.
